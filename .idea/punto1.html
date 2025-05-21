@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herramientas Profesionales de Versionamiento</title>
+    <meta name="description" content="Comparativa profesional de herramientas de control de versiones con estándares de codificación">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/icons/git.png" type="image/png">
+
+    <!-- Hojas de estilo -->
+    <link rel="stylesheet" href="./css/punto1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!-- Fuentes Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Barra de navegación -->
+<nav class="navbar">
+    <div class="container">
+        <a href="#" class="logo">
+            <img src="./img/log.jpg" alt="Logo">
+            <span>VersionPro</span>
+        </a>
+        <div class="nav-links">
+            <a href="#tools" class="nav-link">Herramientas</a>
+            <a href="#comparison" class="nav-link">Comparativa</a>
+            <a href="#workflow" class="nav-link">Flujos</a>
+            <a href="#standards" class="nav-link">Estándares</a>
+            <button id="theme-toggle" class="theme-btn">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+        <button class="hamburger">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="hero">
+    <div class="hero-wave"></div>
+    <div class="container">
+        <div class="hero-content animate__animated animate__fadeIn">
+            <h1>Control de Versiones <span>Profesional</span></h1>
+            <p class="subtitle">Domina las herramientas esenciales con los mejores estándares de la industria</p>
+            <div class="hero-search">
+                <input type="text" placeholder="Buscar herramientas...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="./img/flujo.png" alt="Flujo de control de versiones" class="animate__animated animate__fadeInUp">
+        </div>
+    </div>
+</header>
+
+<!-- Sección de Herramientas -->
+<section id="tools" class="tools-section">
+    <div class="container">
+        <div class="section-header">
+            <h2><i class="fas fa-tools"></i> Herramientas Principales</h2>
+            <p>Explora las soluciones más utilizadas en la industria</p>
+        </div>
+
+        <div class="filter-bar">
+            <div class="filter-tags">
+                <button class="tag-btn active" data-filter="all">Todas</button>
+                <button class="tag-btn" data-filter="distributed">Distribuidas</button>
+                <button class="tag-btn" data-filter="centralized">Centralizadas</button>
+                <button class="tag-btn" data-filter="cloud">En la Nube</button>
+            </div>
+            <div class="sort-options">
+                <select id="sort-tools">
+                    <option value="popularity">Popularidad</option>
+                    <option value="name">Nombre</option>
+                    <option value="release">Lanzamiento</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="tools-grid" id="tools-container">
+            <!-- Las herramientas se cargarán dinámicamente -->
+        </div>
+    </div>
+</section>
+
+<!-- Sección de Comparación -->
+<section id="comparison" class="comparison-section">
+    <div class="container">
+        <div class="section-header">
+            <h2><i class="fas fa-balance-scale-left"></i> Comparativa Detallada</h2>
+            <p>Análisis técnico de las principales características</p>
+        </div>
+
+        <div class="comparison-container">
+            <div class="comparison-chart">
+                <canvas id="featuresChart"></canvas>
+            </div>
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Característica</th>
+                        <th>Git</th>
+                        <th>SVN</th>
+                        <th>GitHub</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Modelo</td>
+                        <td>Distribuido</td>
+                        <td>Centralizado</td>
+                        <td>En la Nube</td>
+                    </tr>
+                    <tr>
+                        <td>Rendimiento</td>
+                        <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></td>
+                        <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></td>
+                        <td><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></td>
+                    </tr>
+                    <!-- Más filas... -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección de Flujos de Trabajo -->
+<section id="workflow" class="workflow-section">
+    <div class="container">
+        <div class="section-header">
+            <h2><i class="fas fa-project-diagram"></i> Flujos de Trabajo</h2>
+            <p>Procesos estándar en el desarrollo profesional</p>
+        </div>
+
+        <div class="workflow-tabs">
+            <button class="workflow-tab active" data-workflow="git">
+                <img src="./img/git.png" alt="Git">
+                Git Flow
+            </button>
+            <button class="workflow-tab" data-workflow="svn">
+                <img src="./img/svn.png" alt="SVN">
+                SVN Flow
+            </button>
+            <button class="workflow-tab" data-workflow="mercurial">
+                <img src="./img/flow.jpg" alt="Mercurial">
+                Mercurial Flow
+            </button>
+        </div>
+
+        <div class="workflow-content">
+            <div id="git-flow" class="workflow-diagram active">
+                <img src="./img/git.png" alt="Git Workflow" class="animate__animated animate__fadeIn">
+                <div class="workflow-steps">
+                    <!-- Pasos del flujo... -->
+                </div>
+            </div>
+            <!-- Otros flujos... -->
+        </div>
+    </div>
+</section>
+
+<!-- Sección de Estándares -->
+<section id="standards" class="standards-section">
+    <div class="container">
+        <div class="section-header">
+            <h2><i class="fas fa-code"></i> Estándares de Codificación</h2>
+            <p>Mejores prácticas para desarrollo profesional</p>
+        </div>
+
+        <div class="standards-tabs">
+            <button class="standard-tab active" data-standard="javascript">
+                <i class="fab fa-js"></i> JavaScript
+            </button>
+            <button class="standard-tab" data-standard="html">
+                <i class="fab fa-html5"></i> HTML5
+            </button>
+            <button class="standard-tab" data-standard="css">
+                <i class="fab fa-css3-alt"></i> CSS3
+            </button>
+        </div>
+
+        <div class="standards-content">
+            <div id="javascript-standards" class="standard-info active">
+                <h3><i class="fab fa-js"></i> Estándares JavaScript</h3>
+                <div class="standard-details">
+                    <div class="standard-card">
+                        <h4><i class="fas fa-brackets-curly"></i> Sintaxis</h4>
+                        <ul>
+                            <li>Usar punto y coma al final de cada declaración</li>
+                            <li>Comillas simples para strings ('')</li>
+                            <li>Nombre de variables en camelCase</li>
+                            <li>Constantes en UPPER_CASE</li>
+                        </ul>
+                    </div>
+                    <div class="standard-card">
+                        <h4><i class="fas fa-file-code"></i> Estructura</h4>
+                        <ul>
+                            <li>Módulos ES6 para organización</li>
+                            <li>Funciones pequeñas y específicas</li>
+                            <li>Evitar funciones anónimas</li>
+                            <li>Uso de async/await en lugar de callbacks</li>
+                        </ul>
+                    </div>
+                    <!-- Más tarjetas... -->
+                </div>
+                <a href="standards/javascript.md" class="download-btn">
+                    <i class="fas fa-download"></i> Descargar Guía Completa
+                </a>
+            </div>
+
+            <!-- Estándares HTML y CSS... -->
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="main-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>VersionPro</h3>
+                <p>La guía definitiva para control de versiones y estándares de codificación profesional.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Recursos</h3>
+                <ul>
+                    <li><a href="#"><i class="fas fa-book"></i> Documentación</a></li>
+                    <li><a href="#"><i class="fas fa-video"></i> Tutoriales</a></li>
+                    <li><a href="#"><i class="fas fa-code"></i> Ejemplos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> info@versionpro.com</li>
+                    <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Newsletter</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit">Suscribirse <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 VersionPro. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <a href="#">Términos</a>
+                <a href="#">Privacidad</a>
+                <a href="#">Cookies</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="./js/punto1.js"></script>
+</body>
+</html>
